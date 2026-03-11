@@ -1,4 +1,4 @@
-package com.laba_1
+package com.ua.laba_2
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            Form()
+            App()
         }
     }
 }
