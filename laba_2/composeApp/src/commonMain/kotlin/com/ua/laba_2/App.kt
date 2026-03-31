@@ -18,17 +18,23 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import co.touchlab.kermit.Logger
+import com.example.compose.AppTheme
+import laba_2.composeapp.generated.resources.BitcountPropSingleInk_VariableFont_CRSV
+
 import laba_2.composeapp.generated.resources.Res
 import laba_2.composeapp.generated.resources.compose_multiplatform
+import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.Font
 
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
+    AppTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(
             modifier = Modifier
@@ -51,11 +57,14 @@ fun App() {
                 ) {
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
                     Text(
-                        "Current time: $currentTime",
+                        text = "Current time: $currentTime",
                         style = TextStyle(
-                            fontSize = 28.sp
+                            fontSize = 28.sp,
+                            fontFamily = FontFamily(
+                                Font(Res.font.BitcountPropSingleInk_VariableFont_CRSV)
+                            )
                         )
-                        )
+                    )
                 }
             }
         }
