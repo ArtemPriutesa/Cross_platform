@@ -23,13 +23,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import co.touchlab.kermit.Logger
 import com.example.compose.AppTheme
-import laba_2.composeapp.generated.resources.BitcountPropSingleInk_VariableFont_CRSV
 
+import laba_2.composeapp.generated.resources.Montserrat_VariableFont_wght
 import laba_2.composeapp.generated.resources.Res
 import laba_2.composeapp.generated.resources.compose_multiplatform
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.Font
 
 @Composable
 @Preview
@@ -61,7 +60,7 @@ fun App() {
                         style = TextStyle(
                             fontSize = 28.sp,
                             fontFamily = FontFamily(
-                                Font(Res.font.BitcountPropSingleInk_VariableFont_CRSV)
+                                Font(Res.font.Montserrat_VariableFont_wght)
                             )
                         )
                     )
