@@ -47,6 +47,9 @@ kotlin {
             implementation(libs.kermit)
             implementation(libs.compose.material3.expressive)
             implementation(libs.datetime)
+            implementation(libs.navigation.compose)
+            implementation(libs.material.icons.core)
+            implementation("androidx.navigation:navigation-compose:2.8.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

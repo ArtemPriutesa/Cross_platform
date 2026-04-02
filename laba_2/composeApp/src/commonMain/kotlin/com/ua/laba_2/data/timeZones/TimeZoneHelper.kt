@@ -1,4 +1,4 @@
-package com.ua.laba_2
+package com.ua.laba_2.data.timeZones
 
 interface TimeZoneHelper {
     fun getTimeZoneStrings(): List<String>
