@@ -50,6 +50,7 @@ kotlin {
             implementation(libs.navigation.compose)
             implementation(libs.material.icons.core)
             implementation("androidx.navigation:navigation-compose:2.8.0")
+            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

@@ -3,4 +3,12 @@
     <string name="buttons">Buttons</string>
     <string name="checkboxes">Checkboxes</string>
     <string name="back">Back</string>
+    <string name="chips">Chips</string>
+    <string name="datepickerDialog">DatepickerDialog</string>
+    <string name="dialog">Dialog</string>
+    <string name="divider">Divider</string>
+    <string name="progressBar">ProgresBar</string>
+    <string name="radioButton">RadioButtons</string>
+    <string name="switch">Switch</string>
+    <string name="timepickerDialog">TimepickerDialog</string>
 </resources>
