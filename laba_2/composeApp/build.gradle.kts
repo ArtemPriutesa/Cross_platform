@@ -49,7 +49,6 @@ kotlin {
             implementation(libs.datetime)
             implementation(libs.navigation.compose)
             implementation(libs.material.icons.core)
-            implementation("androidx.navigation:navigation-compose:2.8.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -57,6 +56,12 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+        }
+        jsMain.dependencies {
+            implementation(npm("@js-joda/timezone", "2.25.1"))
+        }
+        wasmJsMain.dependencies {
+            implementation(npm("@js-joda/timezone", "2.25.1"))
         }
     }
 }
