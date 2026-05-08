@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
+    alias(libs.plugins.koin.compiler)
 }
 
 kotlin {
@@ -34,6 +35,7 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.koin.android)
         }
         commonMain.dependencies {
             implementation(libs.compose.runtime)
@@ -47,10 +49,13 @@ kotlin {
             implementation(libs.navigation.compose)
             implementation(libs.material.icons.core)
             implementation(libs.kermit)
-            //implementation(libs.kotlin.browser)
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+            implementation(libs.koin.test)
         }
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)

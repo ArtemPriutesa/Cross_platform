@@ -1,5 +1,5 @@
 [versions]
-agp = "9.2.0"
+agp = "9.2.1"
 android-compileSdk = "36"
 android-minSdk = "24"
 android-targetSdk = "36"
@@ -12,7 +12,7 @@ androidx-testExt = "1.3.0"
 composeHotReload = "1.0.0"
 composeMultiplatform = "1.10.3"
 junit = "4.13.2"
-kotlin = "2.3.20"
+kotlin = "2.3.21"
 kotlinBrowser = "0.3"
 kotlinx-coroutines = "1.10.2"
 material3 = "1.10.0-alpha05"
@@ -20,6 +20,8 @@ kermit = "2.1.0"
 kotlinxDateTime = "0.7.1"
 navigation-compose = "2.9.2"
 material-icons-core = "1.7.3"
+koin = "4.2.1"
+koin-plugin = "1.0.0-RC2"
 
 [libraries]
 kotlin-browser = { module = "org.jetbrains.kotlinx:kotlin-browser", version.ref = "kotlinBrowser" }
@@ -45,6 +47,12 @@ kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref ="kotlinxDateTime"}
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
 material-icons-core = { module = "org.jetbrains.compose.material:material-icons-core", version.ref = "material-icons-core"}
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin" }
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -53,3 +61,4 @@ composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "com
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+koin-compiler = { id = "io.insert-koin.compiler.plugin", version.ref = "koin-plugin" }
