@@ -28,11 +28,3 @@ internal class AboutViewModel(
         }
     }
 }
-
-val aboutViewModelFactory = viewModelFactory {
-    initializer {
-        AboutViewModel(getAboutRepository())
-    }
-}
-
-internal fun getAboutRepository(): AboutRepository = AboutRepository()

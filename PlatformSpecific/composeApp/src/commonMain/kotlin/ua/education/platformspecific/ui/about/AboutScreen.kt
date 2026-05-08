@@ -16,23 +16,17 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import ua.education.platformspecific.data.about.Platform
-import kotlin.math.max
-import kotlin.math.min
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 internal fun AboutScreen(
-    viewModel: AboutViewModel = viewModel(
-        factory = aboutViewModelFactory,
-    ),
+    viewModel: AboutViewModel = koinViewModel(),
     onUpButtonClick: () -> Unit
 ) {
     Column {
