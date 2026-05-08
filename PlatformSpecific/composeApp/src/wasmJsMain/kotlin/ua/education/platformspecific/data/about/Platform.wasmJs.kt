@@ -2,18 +2,21 @@ package ua.education.platformspecific.data.about
 
 import co.touchlab.kermit.Logger
 import kotlinx.browser.window
+import ua.education.platformspecific.parseBrowserName
+import ua.education.platformspecific.parseOsName
+import ua.education.platformspecific.parseOsVersion
 
 @Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 actual class Platform actual constructor() {
-
+    private val ua = window.navigator.userAgent ?: ""
     actual val osName: String
-        get() = window.navigator.platform ?: "Web"
+        get() = parseOsName(ua)
 
     actual val osVersion: String
-        get() = window.navigator.userAgent ?: "---"
+        get() = parseOsVersion(ua)
 
     actual val deviceModel: String
-        get() = "Browser"
+        get() = "${parseBrowserName(ua)} (Browser)"
 
     actual val cpuType: String
         get() = window.navigator.hardwareConcurrency?.toString() ?: "---"
