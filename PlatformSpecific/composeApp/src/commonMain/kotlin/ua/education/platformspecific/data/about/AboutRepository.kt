@@ -3,10 +3,9 @@ package ua.education.platformspecific.data.about
 import kotlin.math.max
 import kotlin.math.min
 
-internal class AboutRepository {
+internal class AboutRepository(private val platform: Platform) {
 
     fun getAbout(): MutableList<Pair<String, String>> {
-        val platform = Platform()
 
         val items = mutableListOf(
             Pair("Operating System", "${platform.osName} ${platform.osVersion}"),
