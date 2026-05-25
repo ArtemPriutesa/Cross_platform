@@ -1,9 +1,14 @@
 package ua.education.platformspecific.data.about
 
 import kotlinx.coroutines.flow.Flow
+import kotlinx.datetime.LocalDateTime
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.toLocalDateTime
 import ua.education.platformspecific.data.common.preferences.Preferences
 import kotlin.math.max
 import kotlin.math.min
+import kotlin.time.Clock
+import kotlin.time.Instant
 
 internal class AboutRepository(
     private val platform: Platform,
@@ -38,5 +43,15 @@ internal class AboutRepository(
 
     fun visitedCountObservable(): Flow<Int> {
         return preferences.observableAboutVisitedCount
+    }
+
+    fun updateVisitedDate() {
+        val now: Instant = Clock.System.now()
+        val localNow: LocalDateTime = now.toLocalDateTime(TimeZone.currentSystemDefault())
+        preferences.aboutVisitedDate = localNow
+    }
+
+    fun visitedDate(): LocalDateTime? {
+        return preferences.aboutVisitedDate
     }
 }

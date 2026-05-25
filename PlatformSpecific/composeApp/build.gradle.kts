@@ -51,6 +51,7 @@ kotlin {
             implementation(libs.kermit)
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
+            implementation(libs.kotlinx.datetime)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.multiplatform.settings)
             implementation(libs.kotlinx.serialization)

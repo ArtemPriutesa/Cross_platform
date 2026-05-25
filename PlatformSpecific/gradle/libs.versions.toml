@@ -9,19 +9,20 @@ androidx-core = "1.18.0"
 androidx-espresso = "3.7.0"
 androidx-lifecycle = "2.10.0"
 androidx-testExt = "1.3.0"
-composeHotReload = "1.0.0"
-composeMultiplatform = "1.10.3"
+composeHotReload = "1.1.1"
+composeMultiplatform = "1.11.0"
 junit = "4.13.2"
 kotlin = "2.3.21"
 kotlinBrowser = "0.3"
-kotlinx-coroutines = "1.10.2"
+kotlinx-coroutines = "1.11.0"
+kotlinxDatetimeVersion = "0.8.0"
 material3 = "1.10.0-alpha05"
 kermit = "2.1.0"
-kotlinxDateTime = "0.7.1"
+kotlinxDateTime = "0.8.0"
 navigation-compose = "2.9.2"
 material-icons-core = "1.7.3"
 koin = "4.2.1"
-koin-plugin = "1.0.0-RC2"
+koin-plugin = "1.0.0"
 multiplatform-settings = "1.3.0"
 kotlinx-serialization = "1.11.0"
 
@@ -48,6 +49,7 @@ compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-previ
 kotlinx-coroutinesSwing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref ="kotlinxDateTime"}
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetimeVersion" }
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
 material-icons-core = { module = "org.jetbrains.compose.material:material-icons-core", version.ref = "material-icons-core"}
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
