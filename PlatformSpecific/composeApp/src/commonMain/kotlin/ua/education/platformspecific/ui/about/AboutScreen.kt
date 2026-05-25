@@ -16,7 +16,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -29,6 +31,9 @@ internal fun AboutScreen(
     viewModel: AboutViewModel = koinViewModel(),
     onUpButtonClick: () -> Unit
 ) {
+    LaunchedEffect(Unit){
+        viewModel.fetchData()
+    }
     Column {
         Toolbar(onUpButtonClick = onUpButtonClick)
         AboutContent(viewModel)
@@ -61,12 +66,22 @@ private fun AboutContent(viewModel: AboutViewModel) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
     ) {
-        items(state) { row ->
+        items(state.platformInfo) { row ->
             RowView(title = row.first, subtitle = row.second)
+        }
+        item {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth().padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "Screen visited ${state.visitedCount} times."
+                )
+            }
         }
     }
 }
-
 
 
 @Composable

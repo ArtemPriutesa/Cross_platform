@@ -1,9 +1,14 @@
 package ua.education.platformspecific.data.about
 
+import kotlinx.coroutines.flow.Flow
+import ua.education.platformspecific.data.common.preferences.Preferences
 import kotlin.math.max
 import kotlin.math.min
 
-internal class AboutRepository(private val platform: Platform) {
+internal class AboutRepository(
+    private val platform: Platform,
+    private val preferences: Preferences
+) {
 
     fun getAbout(): MutableList<Pair<String, String>> {
 
@@ -22,5 +27,16 @@ internal class AboutRepository(private val platform: Platform) {
         }
         items.add(Pair("Display", displayInfo))
         return items
+    }
+    fun increaseVisitCount() {
+        preferences.aboutVisitedCount++
+    }
+
+    fun visitedCount(): Int {
+        return preferences.aboutVisitedCount
+    }
+
+    fun visitedCountObservable(): Flow<Int> {
+        return preferences.observableAboutVisitedCount
     }
 }
