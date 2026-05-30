@@ -27,7 +27,7 @@ internal class ReminderViewModel(
         }
     }
 
-    fun markReminder(id: String, isCompleted: Boolean) {
+    fun markReminder(id: Long, isCompleted: Boolean) {
         reminderRepository.markReminder(id = id, isCompleted = isCompleted)
         onRemindersUpdated?.invoke(reminders)
     }

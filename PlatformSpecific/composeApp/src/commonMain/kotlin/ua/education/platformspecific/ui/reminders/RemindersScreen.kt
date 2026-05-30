@@ -57,7 +57,7 @@ internal fun RemindersPage(
 ) {
     Column {
         Toolbar(onAboutButtonClick = onAboutButtonClick)
-        ContentView(viewModel)
+        RemindersContent(viewModel)
     }
 }
 
@@ -80,7 +80,7 @@ private fun Toolbar(
 }
 
 @Composable
-private fun ContentView(
+private fun RemindersContent(
     viewModel: ReminderViewModel
 ) {
 
@@ -95,8 +95,8 @@ private fun ContentView(
 
     var textFieldValue by remember { mutableStateOf("") }
 
-    viewModel.onRemindersUpdated = {
-        reminders = it
+    viewModel.onRemindersUpdated = { newList ->
+        reminders = newList
     }
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -206,7 +206,6 @@ private fun NewReminderTextField(
 @Composable
 private fun RemindersViewPreview() {
     RemindersPage(
-        onAboutButtonClick = {},
-        viewModel = ReminderViewModel(RemindersRepository())
+        onAboutButtonClick = {}
     )
 }

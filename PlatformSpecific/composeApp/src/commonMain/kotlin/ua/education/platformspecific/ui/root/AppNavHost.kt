@@ -6,7 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import ua.education.platformspecific.ui.about.AboutScreen
-import ua.education.platformspecific.ui.reminders.RemindersScreen
+import ua.education.platformspecific.ui.reminders.RemindersPage
 
 @Composable
 fun AppNavHost(
@@ -19,7 +19,7 @@ fun AppNavHost(
         modifier = modifier,
     ) {
         composable(Screen.Reminders.route) {
-            RemindersScreen(
+            RemindersPage(
                 onAboutButtonClick = { navController.navigate(Screen.AboutDevice.route) }
             )
         }
